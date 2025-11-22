@@ -4,9 +4,26 @@ const TentangKami = () => {
   return (
     <section
       id="tentang"
-      className="scroll-mt-16 flex py-16 px-6 md:px-16 bg-gray-50 lg:h-[calc(100vh-71px)]"
+      className="relative scroll-mt-16 flex py-16 px-6 md:px-16 bg-gray-50 lg:h-[calc(100vh-71px)] overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-10 md:gap-12 items-center">
+      {/* === BACKGROUND ILLUSTRATION === */}
+      <Image
+        src="/assets/bg-illustration-tentang-kami.png"
+        alt="bg-illustration-tentang-kami"
+        width={700}
+        height={700}
+        className="hidden md:block absolute right-0 -top-80 pointer-events-none select-none opacity-90"
+      />
+      <Image
+        src="/assets/bg-illustration-tentang-kami.png"
+        alt="bg-illustration-tentang-kami"
+        width={700}
+        height={700}
+        className="md:hidden absolute right-0 -top-44 pointer-events-none select-none opacity-90"
+      />
+
+      {/* === CONTENT WRAPPER === */}
+      <div className="relative z-10 max-w-7xl mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-10 md:gap-12 items-center">
         {/* LEFT - Logo Card */}
         <div
           data-aos="zoom-in"
